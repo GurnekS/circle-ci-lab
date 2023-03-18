@@ -21,7 +21,7 @@ public class Dice
         return color;
     }
 
-    public int roll()
+    public int roll(String s)
     {
         return random.nextInt(sides) + 1;
     }
@@ -31,7 +31,7 @@ public class Dice
         int[] rollsHistory = new int[times];
         for (int i = 1; i <= times; i++)
         {
-            rollsHistory[i] = roll();
+            rollsHistory[i] = roll("2");
         }
         return rollsHistory;
     }
