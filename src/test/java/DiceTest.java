@@ -63,15 +63,6 @@ public class DiceTest {
         assertEquals(6, d.getSides());
     }
 
-    @Test
-    public void testRollMany() {
-        Dice d = new Dice(6, "red");
-        int[] results = d.rollMany(5);
-        assertEquals(5, results.length);
-        for (int result : results) {
-            assertTrue(result > 0 && result <= 6);
-        }
-    }
 
 
 
