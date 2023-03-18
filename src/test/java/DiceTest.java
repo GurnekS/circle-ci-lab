@@ -29,7 +29,7 @@ public class DiceTest {
         assertTrue(roll >= 1 && roll <= 6);
 
     }
-
+//    code cov
     @Test
     public void testColors(){
         Dice dice = new Dice(6, "green");
