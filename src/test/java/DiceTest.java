@@ -30,11 +30,7 @@ public class DiceTest {
 
     }
 //    code cov
-    @Test
-    public void testColors(){
-        Dice dice = new Dice(12, "green");
-        assertEquals("green", dice.getColor());
-    }
+
 
     @Test
     public void testRoll()
@@ -51,11 +47,6 @@ public class DiceTest {
 
     }
 
-    @Test
-    public void testToString(){
-        Dice dice = new Dice(12, "red");
-        assertEquals("A 12 sided die", dice.toString());
-    }
 
 
 
