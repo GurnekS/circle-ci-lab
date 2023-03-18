@@ -56,20 +56,27 @@ public class DiceTest {
     public void testRollLargeNumberOfTimes() {
         Dice dice = new Dice(6,"blue");
         int[] counts = new int[6];
-        for (int i = 0; i < 1000000; i++) {
+
+        for (int i = 0; i < 1000000; i++)
+        {
             int result = dice.roll("2");
             counts[result-1]++;
         }
-        for (int count : counts) {
+        for (int count : counts)
+        {
             assertTrue(count > 160000 && count < 180000);
         }
     }
 
     @Test
-    public void testRollZeroTimes() {
+    public void testRollZeroTimes()
+    {
         Dice dice = new Dice(6,"red");
+
         int[] counts = new int[6];
-        for (int i = 0; i < 0; i++) {
+
+        for (int i = 0; i < 0; i++)
+        {
             int result = dice.roll("2");
             counts[result-1]++;
         }
@@ -77,12 +84,24 @@ public class DiceTest {
     }
 
     @Test
-    public void testRollZeroDice() {
+    public void testRollZeroDice()
+    {
         Dice dice = new Dice(6,"green");
         int[] counts = new int[6];
+
         dice.roll("2");
+
         assertArrayEquals(new int[]{0, 0, 0, 0, 0, 0}, counts);
     }
+
+
+    @Test
+    public void testRollLargeNumberOfSides() {
+        Dice dice = new Dice(1000000,"blue");
+        int result = dice.roll();
+        assertTrue(result >= 1 && result <= 1000000);
+    }
+
 
 
 

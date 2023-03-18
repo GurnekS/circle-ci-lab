@@ -41,4 +41,10 @@ public class Dice
     {
         return "A " + sides + " sided die";
     }
+
+    public int roll()
+    {
+
+        return random.nextInt(sides) + 1;
+    }
 }
